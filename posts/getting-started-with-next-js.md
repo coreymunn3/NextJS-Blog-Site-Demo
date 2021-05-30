@@ -1,6 +1,6 @@
 ---
 title: 'Getting Started with NextJS'
-date: '2022-10-15'
+date: '2022-10-16'
 image: getting-started.png
 excerpt: 'NextJS is the React framework for Production. Learn about it here!'
 isFeatured: true
