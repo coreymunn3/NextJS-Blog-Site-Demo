@@ -1,10 +1,20 @@
 import PostContent from '../../components/PostContent';
 import { getPostData, getPostFiles } from '../../lib/posts-util';
+import Head from 'next/head';
+import { Fragment } from 'react';
 
 const PostDetail = (props) => {
   const { post } = props;
   console.log(post);
-  return <PostContent post={post} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>{post.title}</title>
+        <meta name='description' content={post.excerpt}></meta>
+      </Head>
+      <PostContent post={post} />
+    </Fragment>
+  );
 };
 
 export default PostDetail;
