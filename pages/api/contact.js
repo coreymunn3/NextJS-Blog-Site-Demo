@@ -27,10 +27,10 @@ const handler = async (req, res) => {
     };
 
     let client;
+    const connectionString = process.env.mongoURI;
+
     try {
-      client = await MongoClient.connect(
-        'mongodb+srv://coreymunn:Sherm@n5@cluster0.kdjja.mongodb.net/blog-site?retryWrites=true&w=majority'
-      );
+      client = await MongoClient.connect(connectionString);
     } catch (error) {
       res
         .status(500)
