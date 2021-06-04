@@ -5,7 +5,7 @@ import { Fragment } from 'react';
 
 const PostDetail = (props) => {
   const { post } = props;
-  console.log(post);
+  // console.log(post);
   return (
     <Fragment>
       <Head>
@@ -35,7 +35,7 @@ export function getStaticPaths() {
   const postFilenames = getPostFiles();
   const slugs = postFilenames.map((filename) => filename.replace(/\.md$/, ''));
   const paths = slugs.map((slug) => ({ params: { slug: slug } }));
-  console.log(paths);
+  // console.log(paths);
   return {
     paths: paths,
     fallback: 'blocking',
